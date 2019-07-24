@@ -11,3 +11,15 @@ action "Hello World" {
   }
   args = "\"Hello world, I'm $MY_NAME!\""
 }
+
+
+
+workflow "Lint Dockerfiles" {
+  on = "push"
+  resolves = ["Lint all the files"]
+}
+
+action "Lint all the files" {
+  uses = "docker://cdssnc/docker-lint"
+}
+
