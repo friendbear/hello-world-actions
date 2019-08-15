@@ -1,0 +1,14 @@
+on: push
+name: New workflow
+jobs:
+  helloWorld:
+    name: Hello World
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Hello World
+      uses: ./action-a
+      env:
+        MY_NAME: Mona
+      with:
+        args: '"Hello world, I''m $MY_NAME!"'
