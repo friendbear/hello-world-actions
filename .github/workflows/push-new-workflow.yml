@@ -9,6 +9,6 @@ jobs:
     - name: Hello World
       uses: ./action-a
       env:
-        MY_NAME: Mona
+        MY_NAME: Kuma
       with:
         args: '"Hello world, I''m $MY_NAME!"'
